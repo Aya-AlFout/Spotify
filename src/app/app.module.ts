@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { CardComponent } from './card/card.component';
+import { ArtistComponent } from './artist/artist.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { CardComponent } from './card/card.component';
     HeaderComponent,
     SearchComponent,
     LoginComponent,
-    CardComponent
+    CardComponent,
+    ArtistComponent
   ],
   imports: [
     HttpClientModule,

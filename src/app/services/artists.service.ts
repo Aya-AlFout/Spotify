@@ -21,4 +21,13 @@ export class ArtistsService {
     return this.http.get(this.url + `search?q=${ txt }&type=artist&market=US&offset=0&limit=20`, {headers: this.headers})
       .pipe( map(data => data['artists'].items));
   }
+
+  getArtistById(id: string) {
+    return this.http.get(this.url + `artists/${id}`, {headers: this.headers});
+  }
+
+  getAlbums(id: string) {
+    return this.http.get(this.url + `artists/${id}/albums?country=us`, {headers: this.headers})
+      .pipe(map(data => data['albums']));
+  }
 }
