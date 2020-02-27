@@ -7,6 +7,7 @@ import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { CardComponent } from './card/card.component';
 import { ArtistComponent } from './artist/artist.component';
+import {Router, RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
