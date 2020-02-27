@@ -1,6 +1,17 @@
+<!--<div class="main">-->
+<!--  <div class="form-group has-search">-->
+<!--    <span class="fa fa-search form-control-feedback search-icon"></span>-->
+<!--    <input #artist type="text" class="form-control" placeholder="Search for an artist...">-->
+<!--  </div>-->
+<!--</div>-->
+
 <div class="main">
-  <div class="form-group has-search">
-    <span class="fa fa-search form-control-feedback search-icon"></span>
-    <input type="text" class="form-control" placeholder="Search for an artist...">
-  </div>
+    <div class="form-group has-search">
+      <form onsubmit="return false">
+          <span class="fa fa-search form-control-feedback search-icon"></span>
+          <input id="search" class="form-control" type="search" required placeholder="Search for an artist..." (keyup.enter)="searchArtist(inputSearchArtist.value)" #inputSearchArtist>
+      </form>
+    </div>
 </div>
+
+<app-card [items]="artists"></app-card>

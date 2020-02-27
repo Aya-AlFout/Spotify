@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {ArtistsService} from '../services/artists.service';
 
 @Component({
   selector: 'app-search',
@@ -8,9 +8,17 @@ import {FormControl} from '@angular/forms';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  artists: any[] = [];
+
+  constructor(private artistsService: ArtistsService) { }
 
   ngOnInit(): void {
   }
 
+  searchArtist(txt) {
+    this.artistsService.getArtist(txt)
+      .subscribe((data: any) => {
+        this.artists = data;
+      });
+  }
 }
